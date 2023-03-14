@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+
+  padding-bottom: 50px;
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.headerContainer img {
+  width: 150px;
+}
+
+.container {
+  display: flex;
+
+  max-width: 900px;
+  margin: auto;
+}
+
+.container .leftSide {
+  flex: 1;
+
+  margin-right: 40px;
+}
+
+.container .leftSide h1 {
+  margin: 0;
+  
+  font-size: 40px;
+  color: #3A4B5C;
+}
+
+.container .leftSide p {
+  font-size: 16px;
+  color: #6A7D8B;
+  
+  margin-bottom: 40px;
+}
+
+.container .leftSide input {
+  width: 100%;
+
+  border: 0;
+  border-bottom: 1px solid rgba(150, 163, 171, .5);
+
+  font-size: 14px;
+
+  padding: 10px 2px;
+  margin-bottom: 20px;
+
+  outline: none;
+}
+
+.container .leftSide input:disabled {
+  opacity: .5;
+}
+
+.container .leftSide button {
+  background-color: #227C9D;
+
+  color: #FFFFFF;
+  font-size: 15px;
+
+  border: 0;
+  border-radius: 10px;
+
+  padding: 15px 0px;
+  margin-top: 40px;
+
+  width: 100%;
+
+  cursor: pointer;
+
+  transition: all ease .5s;
+}
+
+.container .leftSide button:hover {
+  opacity: 0.8;
+}
+
+.container .leftSide button:disabled {
+  opacity: .5;
+}
+
+.container .rightSide {
+  flex: 1;
+
+  margin-left: 40px;
+  display: flex;
+}
+
+.container .rightSide .grid {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container .rightSide .rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.container .rightSide .rightArrow {
+  width: 70px;
+  height: 70px;
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  margin-left: -35px;
+  margin-top: 140px;
+
+  background-color: #227c9d;
+
+  transition: all ease .3s;
+}
+
+.container .rightSide .rightArrow:hover {
+  opacity: .8;
+}
+
+@media (max-width: 910px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+    
+    flex-direction: column;
+  }
+
+  .container .leftSide {
+    margin-right: 0;
+  }
+
+  .container .rightSide {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+
+  .container .rightSide .rightArrow {
+    margin-top: 0;
+    margin-left: 0;
+
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container .rightSide .grid {
+    grid-template-columns: 1fr;
+  }
+}
